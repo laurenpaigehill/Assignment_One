@@ -254,3 +254,5 @@ console.log(
     (straightFlushCount / NUM_TRIALS) * 100
   }%`
 );
+
+console.log('This code is amazing!');
