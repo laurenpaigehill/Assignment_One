@@ -1,4 +1,15 @@
-NUM_TRIALS = 10000;
+NUM_TRIALS = 1000;
+
+// Count varibales
+
+let flushCount = 0;
+let threeCount = 0;
+let fourCount = 0;
+let houseCount = 0;
+let straightCount = 0;
+let straightFlushCount = 0;
+
+// function to drawn one card
 
 function drawOneCard() {
   const suits = ["H", "C", "D", "H"];
@@ -22,6 +33,8 @@ function drawOneCard() {
   let drawnCard = suits[oneSuit] + " " + numbers[oneNumber];
   return drawnCard;
 }
+
+// function to draw 5 cards
 
 function drawFiveCards() {
   let cards = [];
@@ -179,15 +192,8 @@ console.log(isStraightFlush(hand));
 // print probability of getting each hand
 // use varibale to delare value of count for each hand
 // add ++ increment to each hand to add one to the hand count each time the functioin returns true
-// use for loop to loop through NUM TRIALS variable and print number of times hand is drawn
+// use for loop to loop through NUM TRIALS variable and print number of times a specific hand is drawn
 // console log the hand count divided by number of NUM TRIALS
-
-let flushCount = 0;
-let threeCount = 0;
-let fourCount = 0;
-let houseCount = 0;
-let straightCount = 0;
-let straightFlushCount = 0;
 
 for (let i = 0; i < NUM_TRIALS; i++) {
   const hand = drawFiveCards();
@@ -255,4 +261,4 @@ console.log(
   }%`
 );
 
-console.log('This code is amazing!');
+console.log("This code is amazing!");
